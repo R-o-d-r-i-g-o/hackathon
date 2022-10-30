@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registro </title>
+
+  <!-- native reference -->
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- favicon -->
+  <link rel = "shortcut icon" type = "imagem/x-icon" href = "./images/logo com fundo.jpeg"/>
+
+  <!-- bootstrap references -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha484-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="card text-center">
+    <div class="card-header"><h4>Registro de conta ASSESCOFRAN</h4></div>
+
+    <div class="card-body">
+      <!-- back stage button -->
+      <div style="text-align: left;">
+        <a href="javascript:void(0)"     onClick="history.go(-1); return false;">
+          <div class="botao-voltar"><img style="height: 20px; width: 20px;" src="./images/arrow_back_FILL0_wght400_GRAD0_opsz48.png"></div>
+          <div class="botao-voltar"><p > voltar </p></div>
+        </a>
+      </div>
+
+      <!-- person icon -->
+      <img class="icones-auxiliares" src="./images/person_FILL0_wght400_GRAD0_opsz48.png">
+
+      <div class="col-md">
+        <div class="input-group mb-3">
+          <div class="form-floating">
+            <input
+              type="text" class="form-control" id="NomeInput" placeholder="name@example.com"/>
+            <label for="CPFInput" > Nome </label>
+          </div>
+        </div>
+
+      <div class="col-md">
+        <div class="input-group mb-3">
+          <div class="form-floating">
+            <input
+              type="text" class="form-control" id="EmailInput" placeholder="name@example.com"/>
+            <label for="CPFInput" > E-mail </label>
+          </div>
+        </div>
+
+      <!-- cpf e cnpj -->
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="CPFInput" maxlength="11" oninput="criaMascara('CPF')" placeholder="name@example.com" >
+              <label for="CPFInput" > CPF </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <div class="input-group mb-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="CPNJInput" maxlength="14" oninput="criaMascara('CPNJ')" placeholder="name@example.com" >
+                <label for="CPNJInput" > CNPJ </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- documento e número de identificação -->
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <input type="email" class="form-control" maxlength="9" id="CrcInput" placeholder="name@example.com" >
+              <label for="email" > CRC </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <div class="input-group mb-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="CelularInput" maxlength="11" oninput="criaMascara('Celular')" placeholder="name@example.com" >
+                <label for="CelularInput" > Telefone </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mail icon -->
+      <img class="icones-auxiliares" src="./images/mail_FILL0_wght400_GRAD0_opsz48.png">
+
+      <!-- menssagem -->
+      <div class="col-md">
+        <div class="form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"></textarea>
+          <label for="floatingTextarea2"> Deixe-nos uma mensagem. O que te está achando de seu primeiro contato? </label>
+        </div>
+      </div>
+
+      <!-- key icon -->
+      <img class="icones-auxiliares" src="./images/key_FILL0_wght400_GRAD0_opsz48.png">
+
+      <!-- senha e sua confirmação -->
+      <div class="row g-2">
+        <div class="col-md">
+          <div class="input-group mb-3">
+            <div class="form-floating">
+              <input type="password" class="form-control" id="floatingInputGroup1" placeholder="name@example.com" value="mdo@example.com">
+              <label for="floatingInputGrid" > Senha </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="form-floating">
+            <div class="input-group mb-3">
+              <div class="form-floating">
+                <input type="password" class="form-control" id="floatingInputGroup1" placeholder="name@example.com" value="mdo@example.com">
+                <label for="floatingInputGrid" > Confirme a senha </label>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- submit button -->
+      <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-outline-success" type="button"> Registrar </button>
+          </div>
+        </ul>
+        <p class="fs-6"> Já possuí registro aqui em nossa <a class="text-decoration-none" href="./login.html"> plataforma</a>?</p>
+      </nav>
+
+      <!-- registro pela api -->
+        <div class="card-body">
+          <img class="api_login" src="./images/icons8-google-48.png">
+          <img class="api_login" src="./images/icons8-facebook-circled-48.png">
+          <img class="api_login" src="./images/icons8-twitter-48.png">
+        </div>
+    </div>
+
+  </div>
+
+
+  <script src="./scripts.js"></script>
+
+</body>
+</html>
